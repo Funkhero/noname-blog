@@ -1,7 +1,12 @@
+import auth from './auth';
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   strict: true,
+  modules: {
+    auth,
+  },
   state: {
     loading: true,
   },
@@ -9,9 +14,5 @@ export default new Vuex.Store({
     setItem(state, { item, value }) {
       state[item] = value;
     },
-  },
-  actions: {
-  },
-  getters: {
   },
 });

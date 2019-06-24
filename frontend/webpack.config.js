@@ -13,7 +13,6 @@ module.exports = (env) => {
         axios: 'axios',
         Vue: ['vue/dist/vue.esm.js', 'default'],
         Vuex: 'vuex',
-        VueAwesomeSwiper: 'vue-awesome-swiper',
         VueTheMask: 'vue-the-mask',
         _: 'lodash',
         Velocity: 'velocity-animate',
