@@ -12,3 +12,31 @@ services:
       - ./frontend:/dist
     ports:
       - "3000:3000"
+
+  fw-mongo:
+    image: mongo
+    volumes:
+      - ./mongo:/data
+    ports:
+      - "27016:27016"
+
+  fw-backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    command: bash -c "npm install && npm run dev"
+    env_file:
+      - ./backend/.env
+    volumes:
+      - ./backend:/app
+    ports:
+      - "4000:4000"
+    depends_on:
+      - fw-mongo
+    networks:
+      - external_network
+      - default
+
+networks:
+  external_network:
+    external: true
