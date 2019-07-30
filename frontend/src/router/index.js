@@ -1,6 +1,7 @@
 import Router from 'vue-router';
-import IndexPage from '../views/IndexPage.vue';
-import AuthPage from '../views/AuthPage.vue';
+
+const IndexPage = () => import(/* webpackChunkName: "indexPage" */ '../views/IndexPage.vue');
+const AuthPage = () => import(/* webpackChunkName: "authPage" */ '../views/AuthPage.vue');
 
 Vue.use(Router);
 
