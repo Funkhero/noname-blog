@@ -1,10 +1,10 @@
 <template>
-  <div class="index-page">Hello World!</div>
+  <div class="index-page"></div>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
+  name: 'MainPage',
 };
 </script>
 
