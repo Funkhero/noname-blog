@@ -1,5 +1,7 @@
 <template>
-  <div class="auth-page"></div>
+  <div class="auth-page">
+    <router-link to="/">На главную</router-link>
+  </div>
 </template>
 
 <script>
