@@ -1,11 +1,13 @@
 <template>
   <layout>
-    <transition
-      name="router-pages"
-      mode="out-in"
-    >
-      <router-view/>
-    </transition>
+    <div class="app-content">
+      <transition
+        name="router-pages"
+        mode="out-in"
+      >
+        <router-view/>
+      </transition>
+    </div>
   </layout>
 </template>
 
@@ -21,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .app-content {
-    padding: 20px;
-  }
+.app-content {
+  padding: 20px;
+}
 </style>

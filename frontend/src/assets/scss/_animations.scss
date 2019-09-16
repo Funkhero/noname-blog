@@ -11,3 +11,18 @@
     opacity: 1;
   }
 }
+
+.fade-out {
+  &-enter-active,
+  &-leave-active {
+    transition: .2s ease;
+  }
+  &-enter,
+  &-leave-to {
+    opacity: 0;
+  }
+  &-leave,
+  &-enter-to {
+    opacity: 1;
+  }
+}
