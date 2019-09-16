@@ -1,13 +1,11 @@
 <template>
   <layout>
-    <div class="app-content">
-      <transition
-        name="router-pages"
-        mode="out-in"
-      >
-        <router-view/>
-      </transition>
-    </div>
+    <transition
+      name="router-pages"
+      mode="out-in"
+    >
+      <router-view/>
+    </transition>
   </layout>
 </template>
 
