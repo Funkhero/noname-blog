@@ -1,9 +1,9 @@
 <template>
   <div class="table-sorter">
-    <table class="table">
-      <table-header/>
-      <table-body/>
-      <table-footer/>
+    <table class="table-sorter__table">
+      <table-header :headers="headers"/>
+      <table-body :items="items"/>
+      <table-footer v-if="withPagination"/>
     </table>
   </div>
 </template>
@@ -21,6 +21,13 @@ export default {
     TableFooter,
   },
   props: {
+    headers: {
+      type: Array,
+      required: true,
+      validator(value) {
+        return value.filter(item => typeof(item) !== object).length <= 0;
+      },
+    },
     items: {
       type: Array,
       default: () => [],

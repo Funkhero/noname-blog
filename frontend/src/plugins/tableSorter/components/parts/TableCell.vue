@@ -1,10 +1,16 @@
 <template>
-  <td></td>
+  <td v-text="tableCell"/>
 </template>
 
 <script>
 export default {
   name: 'TableCell',
+  props: {
+    tableCell: {
+      type: [Number, String],
+      default: '',
+    }
+  }
 };
 </script>
 
