@@ -3,7 +3,7 @@
     <table class="table-sorter__table">
       <table-header :headers="headers"/>
       <table-body :items="items"/>
-      <table-footer v-if="withPagination"/>
+      <table-footer :with-pagination="withPagination"/>
     </table>
   </div>
 </template>
@@ -37,11 +37,11 @@ export default {
     },
     withPagination: {
       type: Boolean,
-      default: false
+      default: true,
     },
     withCrud: {
       type: Boolean,
-      default: false
+      default: false,
     },
   },
 };
